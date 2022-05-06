@@ -6,16 +6,20 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
+
 module.exports = {
-    entry: './src/client/index.js',
-    mode: 'production',
-    optimization: {
-        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
-    },
     output: {
         libraryTarget: 'var',
         library: 'Client'
     },
+    
+   
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    },
+    entry: './src/client/index.js',
+    mode: 'production',
+    
     module: {
         rules: [{
                 test: '/\.js$/',
