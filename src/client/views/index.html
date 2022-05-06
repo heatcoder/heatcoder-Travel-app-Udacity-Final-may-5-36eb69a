@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    <title>Travel Planner Project</title>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <h1 class="travelPlanner">Travel Planner</h1>
+        <!--Form starts-->
+        <div class="form-group">
+            <form id="form" >
+                <label for="Destination"> Enter your destination </label>
+                <input type="text" name="Destination" id="destination" class="destination" placeholder="Sydney" pattern="^[a-zA-Z ]*$" required>
+                
+                <label class="start" for="startDate"> From </label>
+                <input type="date" id="startDate" value="" valueAsNumber=""  class="from" required>
+                
+                <label class="end" for="endDate">To</label>
+                <input type="date" id="endDate" value="" valueAsNumber=""  class="endDate" required>
+                
+                <button type="submit" id="button">Plan</button>
+            </form>
+            <!--Form Finishes-->
+
+            <!--Message Box starts-->
+            <section id=show>
+                <div id="final">
+                    <div > <p class="goingto">My trip to :</p></div>
+                    <div id="message"></div><br>
+                    <div id="forecast"></div>
+                    <div id="temp"></div>
+                    <div id="description"></div><br><br>
+                    <div ><img  id="imagePb" src="" /></div>
+                </div>
+            </section>
+            <!--Message Box finishes-->
+        <div>
+            
+       
+        <!--Form Ends-->   
+        
+    </div>
+
+   
+
+    <div> <br> </div>
+    <footer>  </footer>
+
+     <script>
+        // Check that service workers are supported
+        if ('service-worker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
+</body>
+
+</html>

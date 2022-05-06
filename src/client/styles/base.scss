@@ -1,0 +1,35 @@
+/* CSS reset */
+
+
+:root {
+    --blue: rgba(0, 0, 0, 0.2);
+    --white: #ffffff; 
+    --red: #ff0000; 
+    --black: #000000; 
+    --green: #197f00;
+    --purple: #aa2ff2;
+    --lightblue: #e5e5f7;
+   
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+  
+body {
+    min-height: 100vh;
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--lightblue);
+    opacity: 0.8;
+    background-image: -webkit-radial-gradient (var(--purple) 0.5px, var(--lightblue) 0.5px);
+    background-size: 10px 10px;
+}
+  
